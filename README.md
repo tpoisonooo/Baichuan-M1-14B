@@ -395,12 +395,15 @@ print(response)
 
 ```bash
 docker pull vllm/vllm-openai:v0.6.6.post1
-# docker内安装vllm
+# docker 内安装 vllm, 进入 docker （nvidia-docker 安装查看 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html） 
+docker run --gpus all -it --entrypoint /bin/bash vllm/vllm-openai:v0.6.6.post1
+# 国内用户可用 ghproxy 代理 GitHub
 git clone https://github.com/baichuan-inc/vllm.git
 cd vllm
 export VLLM_PRECOMPILED_WHEEL_LOCATION=https://files.pythonhosted.org/packages/b0/14/9790c07959456a92e058867b61dc41dde27e1c51e91501b18207aef438c5/vllm-0.6.6.post1-cp38-abi3-manylinux1_x86_64.whl
 # 国内用户可选用以下配置
 # export VLLM_PRECOMPILED_WHEEL_LOCATION=https://pypi.tuna.tsinghua.edu.cn/packages/b0/14/9790c07959456a92e058867b61dc41dde27e1c51e91501b18207aef438c5/vllm-0.6.6.post1-cp38-abi3-manylinux1_x86_64.whl
+# 国内用户推荐配置 pypi 镜像
 pip install --editable . 
 ```
 

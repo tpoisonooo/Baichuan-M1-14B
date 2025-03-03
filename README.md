@@ -403,7 +403,7 @@ cd vllm
 export VLLM_PRECOMPILED_WHEEL_LOCATION=https://files.pythonhosted.org/packages/b0/14/9790c07959456a92e058867b61dc41dde27e1c51e91501b18207aef438c5/vllm-0.6.6.post1-cp38-abi3-manylinux1_x86_64.whl
 # 国内用户可选用以下配置
 # export VLLM_PRECOMPILED_WHEEL_LOCATION=https://pypi.tuna.tsinghua.edu.cn/packages/b0/14/9790c07959456a92e058867b61dc41dde27e1c51e91501b18207aef438c5/vllm-0.6.6.post1-cp38-abi3-manylinux1_x86_64.whl
-# 国内用户推荐配置 pypi 镜像
+# 国内用户推荐配置 pypi 镜像，安装需 30min 以上
 pip install --editable . 
 ```
 
